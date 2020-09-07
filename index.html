@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="homepage.js"></script>
+  </head>
+<body ng-app="myApp">
+  <nav class="navbar navbar-expand-lg navbar-default bg-transparent fixed-top">
+    <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div id="my-nav" class="collapse navbar-collapse" controller="HomeController">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><span class="span-custom">FINTECH</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  aria-disabled="true"><span class="span-custom">PROPTECH</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  aria-disabled="true"><span class="span-custom">MANUFACTURING</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  aria-disabled="true"><span class="span-custom">MEDIA</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  aria-disabled="true"><span class="span-custom">RETAIL</span></a>
+        </li>
+      </ul>
+      <div onclick="menuFunction(this)" style="padding-left:100px;padding-right:50px;">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </nav>  
+  <div id="myNav" class="dropdown-overlay">
+    <div>									
+      <div class="row" style="padding-left:200px;padding-top:50px;">
+        <div class="col-md-11 col-xs-10"> 
+          <a href="/contact-us" class="btn btn-default-bordered btn-rounded pull-right">Contact Us </a> </div>
+        <div class="col-md-6 col-sm-6" >
+          <p class="captiontext">INDUSTRIES</p>
+          <ul>
+            <li><a href="/fintech">Fintech</a></li>
+            <li><a href="/proptech">Proptech</a> </li>
+            <li><a href="/manufacturing">Manufacturing</a></li>
+            <li><a href="/agtech">Agtech</a></li>
+            <li><a href="/media">Media</a></li>
+            <li><a href="/retail">Retail</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <p class="captiontext">Solutions</p>
+          <ul>
+            <li><a href="/digital">Digital</a></li>
+            <li><a href="/artificial-intelligence">AI and Analytics</a></li>
+            <li><a href="/quality-engineering">Quality Engineering</a></li>
+            <li><a href="/salesforce">Salesforce</a></li>
+            <li><a href="/mulesoft">Mulesoft</a></li>
+            <li><a href="/microsoft">Microsoft</a></li>
+          </ul>
+        </div>										
+      </div>
+      <div class="row" style="padding-left:200px;padding-top:50px;">
+        <div class="col-md-6 col-sm-6">
+          <p class="captiontext"> LENDING PRODUCTS</p>
+          <ul>
+            <li><a href="#" target="_blank">VΞLOX Digital Lending </a>
+              <ul class="smal-text veloxmenu">
+                <li><a href="#">New URLA</a></li>
+                <li><a href="#">PPP Solution</a></li>
+              </ul>
+            </li>
+            <p class="captiontext">Manufacturing Products</p>
+            <ul class="smal-text veloxmenu">
+              <li><a href="#">Warranty</a></li>
+              <li><a href="#">Manufacturing Analytics</a></li>
+              <li><a href="#">Product Registration</a></li>
+            </ul>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6 lastmenu">
+          <p class="captiontext">Company</p>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers </a></li>
+            <li><a href="#">Download Center</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Partners</a></li>                                            <li><a href="/people">People</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>										
+      </div>
+    </div>
+  </div>
+     
+      <div ng-view>
+         
+      </div>
+      <script>
+        show=false;
+        function menuFunction(x) {
+         x.classList.toggle("change");
+         if(show==false){
+          document.getElementById("myNav").style.height = "100%"; 
+          show=true;
+         }else{
+          document.getElementById("myNav").style.height = "0%"; 
+          show=false;
+         }
+     }
+      </script>
+</body>
+</html>
+
